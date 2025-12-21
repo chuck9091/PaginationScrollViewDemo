@@ -1,3 +1,7 @@
+[中文版本](README.md)
+
+[English Version](doc/README_EN.md)
+
 # 目录
 
 - [1. 背景](#1-背景)

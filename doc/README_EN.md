@@ -1,3 +1,7 @@
+[中文版本](../README.md)
+
+[English Version](README_EN.md)
+
 # Table of Contents
 
 - [1. Background](#1-background)
