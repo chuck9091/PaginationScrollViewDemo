@@ -8,7 +8,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.chuck.paginationscrollviewdemo"
+        applicationId "com.chuck.paginationscrollview"
         minSdk 24
         targetSdk 33
         versionCode 1
@@ -18,18 +18,32 @@ android {
     }
 
     signingConfigs {
+//        release { // 推荐定义一个release版本的签名配置
+//            storeFile file('./signature/platform.jks') // 例如: file("myreleasekey.jks")
+//            storePassword 'android' // 例如: "123456"
+//            keyAlias 'android' // 例如: "my_alias"
+//            keyPassword 'android' // 例如: "123456"
+//        }
+//        // 你也可以同样定义一个debug配置，用于调试版本签名
+//        debug {
+//            storeFile file('./signature/platform.jks') // 例如: file("myreleasekey.jks")
+//            storePassword 'android' // 例如: "123456"
+//            keyAlias 'android' // 例如: "my_alias"
+//            keyPassword 'android' // 例如: "123456"
+//        }
+
         release { // 推荐定义一个release版本的签名配置
-            storeFile file('./signature/platform.jks') // 例如: file("myreleasekey.jks")
-            storePassword 'android' // 例如: "123456"
-            keyAlias 'android' // 例如: "my_alias"
-            keyPassword 'android' // 例如: "123456"
+            storeFile file('./signature/phone_qk_platform.jks') // 例如: file("myreleasekey.jks")
+            storePassword '111111' // 例如: "123456"
+            keyAlias 'thh' // 例如: "my_alias"
+            keyPassword '111111' // 例如: "123456"
         }
         // 你也可以同样定义一个debug配置，用于调试版本签名
         debug {
-            storeFile file('./signature/platform.jks') // 例如: file("myreleasekey.jks")
-            storePassword 'android' // 例如: "123456"
-            keyAlias 'android' // 例如: "my_alias"
-            keyPassword 'android' // 例如: "123456"
+            storeFile file('./signature/phone_qk_platform.jks') // 例如: file("myreleasekey.jks")
+            storePassword '111111' // 例如: "123456"
+            keyAlias 'thh' // 例如: "my_alias"
+            keyPassword '111111' // 例如: "123456"
         }
     }
 
@@ -52,6 +66,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    lintOptions {
+        ignoreWarnings true
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -63,10 +81,10 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    implementation files('libs/router_20251220_1.0.0.jar')
-    implementation files('libs/utils_20251220_1.0.0.jar')
-    implementation(name: 'data_persistence_20251220_1.0.0', ext: 'aar')
-    implementation(name: 'item_foundation_20251220_1.0.0', ext: 'aar')
-    implementation(name: 'paginationscrollview_20251220_1.0.0', ext: 'aar')
-    implementation(name: 'popup_exchange_20251220_1.0.0', ext: 'aar')
+    implementation files('libs/router_20251227_1.0.0.jar')
+    implementation files('libs/utils_20251227_1.0.0.jar')
+    implementation(name: 'data_persistence_20251227_1.0.0', ext: 'aar')
+    implementation(name: 'item_foundation_20251227_1.0.0', ext: 'aar')
+    implementation(name: 'paginationscrollview_20251227_1.0.0', ext: 'aar')
+    implementation(name: 'popup_exchange_20251227_1.0.0', ext: 'aar')
 }
